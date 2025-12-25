@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App design colors -->
+    <color name="primary">#E20613</color>
+    <color name="app_black">#1A1A1A</color>
+    <color name="app_grey">#61616B</color>
+    <color name="background">#F3F4F8</color>
+    <color name="card_background">#FFFFFF</color>
+    
+    <!-- Button colors aligned with app -->
+    <color name="accept">#418A3A</color>
+    <color name="accept_ripple">#6BB562</color>
+    <color name="decline">#E20613</color>
+    <color name="decline_ripple">#F44336</color>
+
+    <color name="action_text">#FFFFFF</color>
+    <color name="ripple_main_color">#40E20613</color>
+    
+    <!-- Text colors -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#61616B</color>
+</resources>

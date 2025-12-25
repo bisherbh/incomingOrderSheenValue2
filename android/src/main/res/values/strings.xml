@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="text_accept">View Order</string>
+    <string name="text_decline">Ignore</string>
+    <string name="text_missed_call">Missed Order</string>
+    <string name="text_call_back">View Order</string>
+    <string name="text_new_order">New Order</string>
+</resources>
