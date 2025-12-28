@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'android_params.dart';
 import 'ios_params.dart';
 
-part 'call_kit_params.g.dart';
+part 'call_kit_params.generated.dart';
 
 /// Object config for General - Incoming Order notification.
 @JsonSerializable(explicitToJson: true)

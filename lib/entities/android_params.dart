@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'android_params.g.dart';
+part 'android_params.generated.dart';
 
 /// Object config for Android - Incoming Order notification.
 @JsonSerializable(explicitToJson: true)
@@ -52,8 +52,7 @@ class AndroidParams {
   /// Notification channel name of missed order (default: "Missed Order").
   final String? missedCallNotificationChannelName;
 
-  factory AndroidParams.fromJson(Map<String, dynamic> json) =>
-      _$AndroidParamsFromJson(json);
+  factory AndroidParams.fromJson(Map<String, dynamic> json) => _$AndroidParamsFromJson(json);
 
   Map<String, dynamic> toJson() => _$AndroidParamsToJson(this);
 }

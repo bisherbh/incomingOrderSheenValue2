@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'ios_params.g.dart';
+part 'ios_params.generated.dart';
 
 /// Object config for iOS.
 @JsonSerializable(explicitToJson: true)
@@ -42,8 +42,7 @@ class IOSParams {
     this.ringtonePath,
   });
 
-  factory IOSParams.fromJson(Map<String, dynamic> json) =>
-      _$IOSParamsFromJson(json);
+  factory IOSParams.fromJson(Map<String, dynamic> json) => _$IOSParamsFromJson(json);
 
   Map<String, dynamic> toJson() => _$IOSParamsToJson(this);
 }
