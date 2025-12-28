@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'android_params.generated.dart';
+part of 'android_params.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'call_kit_params.generated.dart';
+part of 'call_kit_params.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
