@@ -46,9 +46,17 @@ class TransparentActivity : Activity() {
         when (intent.getStringExtra("type")) {
             "ACCEPT" -> {
                 val data = intent.getBundleExtra("data")
-                val map: HashMap<String, Any?> = data?.getSerializable("EXTRA_CALLKIT_EXTRA") as HashMap<String, Any?>
-                val prefs: SharedPreferences = getSharedPreferences("FlutterSharedPreferences", Context.MODE_PRIVATE)
-                prefs.edit().putString("flutter.case_id", map["case_id"] as String).commit()
+                try {
+                    @Suppress("UNCHECKED_CAST")
+                    val map = data?.getSerializable("EXTRA_CALLKIT_EXTRA") as? HashMap<String, Any?>
+                    val caseId = map?.get("case_id") as? String ?: ""
+                    if (caseId.isNotEmpty()) {
+                        val prefs: SharedPreferences = getSharedPreferences("FlutterSharedPreferences", Context.MODE_PRIVATE)
+                        prefs.edit().putString("flutter.case_id", caseId).commit()
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
                 val acceptIntent = CallkitIncomingBroadcastReceiver.getIntentAccept(this@TransparentActivity, data)
                 sendBroadcast(acceptIntent)
             }
@@ -57,7 +65,7 @@ class TransparentActivity : Activity() {
                 val acceptIntent = CallkitIncomingBroadcastReceiver.getIntentCallback(this@TransparentActivity, data)
                 sendBroadcast(acceptIntent)
             }
-            else -> { // Note the block
+            else -> {
                 val data = intent.getBundleExtra("data")
                 val acceptIntent = CallkitIncomingBroadcastReceiver.getIntentAccept(this@TransparentActivity, data)
                 sendBroadcast(acceptIntent)
